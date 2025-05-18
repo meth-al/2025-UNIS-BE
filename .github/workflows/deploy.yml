@@ -25,7 +25,9 @@ jobs:
         run: ./gradlew clean build -x test  # Gradle로 프로젝트를 빌드함. 테스트는 제외 (-x test)
 
       - name: Login to ECR
-        uses: aws-actions/amazon-ecr-login@v1  # ECR에 로그인. 이후 Docker push를 하기 위함
+        uses: aws-actions/amazon-ecr-login@v1
+        with:
+          aws-region: ap-northeast-2  # ECR에 로그인. 이후 Docker push를 하기 위함
 
       - name: Build and Push Docker Image
         run: |
