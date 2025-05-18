@@ -14,6 +14,10 @@
 <body>
 <!-- navigation -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    {{#msg}}
+        <div class="alert alert-primary alert-dismissible">{{msg}}</div>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    {{/msg}}
     <div class="container-fluid">
         <a class="navbar-brand" href="#">Navbar</a>
         <button class="navbar-toggler" type="button"
