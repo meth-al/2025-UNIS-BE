@@ -56,5 +56,6 @@ jobs:
             docker run -d \
               --name app \
               --env-file .env \
+              --network host \ 
               -p 8080:8080 \
               656697807760.dkr.ecr.ap-northeast-2.amazonaws.com/my-backend-repo:latest
